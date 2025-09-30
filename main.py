@@ -45,11 +45,11 @@ async def handle_incoming_call(request: Request):
         "Please wait while we connect your call",
         voice="Google.en-US-Chirp3-HD-Aoede"
     )
-    response.pause(length=1)
-    response.say(   
-        "Connected",
-        voice="Google.en-US-Chirp3-HD-Aoede"
-    )
+    # response.pause(length=1)
+    # response.say(
+    #     "Connected",
+    #     voice="Google.en-US-Chirp3-HD-Aoede"
+    # )
     host = request.url.hostname
     connect = Connect()
     connect.stream(url=f'wss://{host}/media-stream')
